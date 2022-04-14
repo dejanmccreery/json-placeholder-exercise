@@ -68,7 +68,7 @@
     });
 
     dataForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // prevent default page refresh on form submission
         if (requestSelector.value == 'ALL') readAll();
         else if (requestSelector.value == 'ID') readById();
     });
