@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <a id="toggle">MENU</a>
+        <a class="nav-link " href="../index.html">HOME</a>
+        <a class="nav-link" href="#">CREATE</a>
+        <a class="nav-link" href="./read.html">READ</a>
+        <a class="nav-link" href="./update.html">UPDATE</a>
+        <a class="nav-link" href="./delete.html">DELETE</a>
+    </nav>
+    
+    <header>
+        <h1>Create user accounts</h1>
+        <p>Create user accounts on this page</p>
+    </header>
+    
+    <div class="container">
+        <section id="banner" class="container">
+            <h2>Status: <span id="status"></span></h2>
+        </section>
+        <main class="container">
+            <div id="data-table">
+                
+            </div>
+            <h2>Create a user:</h2>
+            <!-- declare a form with form element -->
+            <form id="data-form" class="container">
+                <!-- a fieldset is a group of related form inputs within a form (not mandatory, but helpful for accessibility) -->
+                <fieldset id="general-info">
+                    <legend>General information</legend>
+                    <!-- a legend describes a fieldset -->
+
+                    <!-- form inputs are created with the input element
+                         - each form input must have an associated label
+                         - the label should have a for attribute that has the same value as the input elements id attribute that we are targeting
+                         - input elements have a name attribute, when a form is submitted the data is submitted as key:value pairs where the key is the value of the 'name' attribute
+                         - each form input element can have a type, this applies default validation
+                         - to make an input required, specify the required attribute
+                    -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"><br>
+
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="phone">phone:</label>
+                    <input type="tel" id="phone" name="phone"><br>
+
+                    <label for="website">website:</label>
+                    <input type="text" id="website" name="website"><br>
+                </fieldset>
+
+                <fieldset id="address-details">
+                    <legend>Address details</legend>
+
+                    <label for="street">street:</label>
+                    <input type="text" id="street" name="street"><br>
+
+                    <label for="city">city:</label>
+                    <input type="text" id="city" name="city"><br>
+
+                    <label for="suite">suite:</label>
+                    <input type="text" id="suite" name="suite"><br>
+
+                    <label for="zipcode">zipcode:</label>
+                    <input type="text" id="zipcode" name="zipcode"><br>
+
+                    <label for="geo-lat">geo-latitude:</label>
+                    <input type="text" id="geo-lat" name="lat"><br>
+
+                    <label for="geo-long">geo-longitude:</label>
+                    <input type="text" id="geo-long" name="lng"><br>
+                </fieldset>
+                
+                <fieldset id="company-details">
+                    <legend>Company details</legend>
+
+                    <label for="company-name">company name:</label>
+                    <input type="text" id="company-name" name="company-name"><br>
+
+                    <label for="bs">bs:</label>
+                    <input type="text" id="bs" name="bs"><br>
+
+                    <label for="catchPhrase">Catch phrase:</label>
+                    <input type="text" id="catch-phrase" name="catch-phrase"><br>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <p><small>name here - Copyright &copy; 2022</small></p>
+    </footer>
+
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/table-manager.js"></script>
+    <script src="../scripts/error-handler.js"></script>
+    <script src="../scripts/status-handler.js"></script>
+    <script src="../scripts/users/user.js"></script>
+    <script src="../scripts/users/create-user.js"></script>
+</body>
+</html>
